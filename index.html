@@ -270,7 +270,18 @@
 
     <script>
         document.getElementById('mobile-menu').addEventListener('click', function() {
+            this.classList.toggle('active');
             document.querySelector('.nav-list').classList.toggle('active');
+            document.querySelector('.home-section').classList.toggle('pushed-down');
+            
+            // Animation supplémentaire pour les images
+            if (document.querySelector('.nav-list').classList.contains('active')) {
+                document.querySelector('.left-image-1').style.transform = 'translateY(20px) rotate(5deg)';
+                document.querySelector('.left-image-2').style.transform = 'translateY(20px) rotate(-5deg)';
+            } else {
+                document.querySelector('.left-image-1').style.transform = '';
+                document.querySelector('.left-image-2').style.transform = '';
+            }
         });
     </script>
 </body>

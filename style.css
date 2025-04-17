@@ -641,6 +641,28 @@ li {
 }
 
 
+/* Ajoutez ces styles */
+.home-section {
+    transition: transform 0.3s ease-in-out;
+}
+
+.home-section.pushed-down {
+    transform: translateY(calc(50vh - 70px)); /* Ajustez cette valeur selon vos besoins */
+}
+
+.left-image-1, .left-image-2 {
+    transition: transform 0.5s ease-in-out;
+}
+
+.nav-list.active ~ .home-section .left-image-1 {
+    transform: translateY(10px) rotate(5deg);
+}
+
+.nav-list.active ~ .home-section .left-image-2 {
+    transform: translateY(10px) rotate(-5deg);
+}
+
+
 
 /* Menu Burger Styles */
 .menu-toggle {
