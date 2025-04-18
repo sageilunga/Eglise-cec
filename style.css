@@ -31,7 +31,7 @@ nav {
 
 nav ul li {
    margin: 0;
-   padding: 0 10px;
+   padding: 0;
 }
 nav ul li a {
 color: white;
@@ -39,6 +39,7 @@ text-decoration: none;
 padding: 8px 12px;
 border-radius: 20px;
 transition: all 0.3s ease;
+font-size: 20px;
 }
 
 nav ul {
@@ -51,27 +52,19 @@ nav ul {
 
 .nav-list {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     width: 100%;
     margin-bottom: 25px;  
-    font-size: 25px;
+    font-size: 50px;
     background: none;
 }
-
-
 
 .logo-div img {
     width: 100px;
 }
 
-ul {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    list-style: none;
-    
-}
+
 
 ul li {
     padding: 10px 25px;
@@ -83,7 +76,6 @@ ul li a {
     text-decoration: none;
     color:white;
     transition: 0.5s;
-    font-size: 14px;
     padding: 8px 12px;
     display: inline-block;
 }
@@ -615,15 +607,7 @@ ul {
     padding-left: 0;
 }
 
-li {
-    margin-bottom: 12px;
-    color: #34495e;
-    padding: 8px;
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    
-}
+
 
 .highlight {
     color: #e74c3c;
@@ -647,7 +631,7 @@ li {
 }
 
 .home-section.pushed-down {
-    transform: translateY(calc(50vh - 70px)); /* Ajustez cette valeur selon vos besoins */
+    transform: translateY(calc(50vh - 30px)); /* Ajustez cette valeur selon vos besoins */
 }
 
 .left-image-1, .left-image-2 {
@@ -680,13 +664,17 @@ li {
 }
 
 /* Version Mobile */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .menu-toggle {
         display: block;
     }
 
+    .home-section .left-image-2 {
+        display: none; /* On cache la seconde image pour plus de simplicité */
+    }
+
     .right {
-        margin-top: 250px;
+        margin-top: 200px;
         width: 100%;    
     }
     .right h1 {
@@ -788,9 +776,11 @@ li {
 
     .home-section .right {
         margin-left: 0;
-        margin-top: 30px;
+        margin-top: 500px;
         text-align: center;
     }
+
+
 
     .destinations .gallerie {
         flex-wrap: wrap;
@@ -827,6 +817,8 @@ li {
         padding: 20px;  
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        display: flex;
     }
 }
 
@@ -856,6 +848,10 @@ li {
         width: 100%;
         margin-left: 0;
         text-align: center;
+    }
+
+    .right{
+        margin-top: 200px;
     }
 
     .right h1 {
